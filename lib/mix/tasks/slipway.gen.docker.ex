@@ -12,7 +12,7 @@ defmodule Mix.Tasks.Slipway.Gen.Docker do
     if name == nil do
       Mix.shell().error("No mix.exs found, must be run in an Elixir project")
     else
-      Mix.Generator.create_file("Dockerfile", contents(name, app))
+      Mix.Generator.create_file("Dockerfile", contents(app))
       Mix.shell().info(
       """
       You need to run the following to build the docker image:
@@ -29,7 +29,7 @@ defmodule Mix.Tasks.Slipway.Gen.Docker do
     end
   end
 
-  defp contents(name, app) do
+  defp contents(app) do
     """
     #===========
     #Build Stage
