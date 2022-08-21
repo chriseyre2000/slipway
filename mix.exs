@@ -8,6 +8,7 @@ defmodule Slipway.MixProject do
       elixir: "~> 1.13",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
+      package: package(),
       deps: deps(),
       aliases: aliases()
     ]
@@ -22,7 +23,19 @@ defmodule Slipway.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    []
+    [
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+    ]
+  end
+
+  defp package do
+    [
+    name: "slipway",
+    # These are the default files included in the package
+    description: "A set of tools to help you launch.",
+    licenses: ["MIT"],
+    links: %{"GitHub" => "https://github.com/chriseyre2000/slipway"}
+    ]
   end
 
   defp aliases do
