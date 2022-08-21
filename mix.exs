@@ -4,7 +4,7 @@ defmodule Slipway.MixProject do
   def project do
     [
       app: :slipway,
-      version: "0.1.0",
+      version: "0.2.0",
       elixir: "~> 1.13",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
@@ -46,6 +46,6 @@ defmodule Slipway.MixProject do
 
   defp build_releases(_) do
     {output, _} = System.cmd("mix", ["archive.build"], env: [{"MIX_ENV", "prod"}])
-    IO.puts(output)
+    Mix.shell().info(output)
   end
 end
