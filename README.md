@@ -1,6 +1,6 @@
 # Slipway
 
-[logo]: https://github.com/chriseyre2000/slipway/raw/master/hs-spender-UsfuL6i_SWQ-unsplash.jpg "Image"
+[logo]: https://github.com/chriseyre2000/slipway/blob/main/hs-spender-UsfuL6i_SWQ-unsplash.jpg "Image"
 
 This is an addon that includes a generator for creating Dockerfiles.
 
